@@ -1,0 +1,19 @@
+.navbar {
+  max-width: var(--main-width);
+  width: var(--main-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--navbar-padding);
+}
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 1rem;
+}
+.navbar__logo > a > img {
+  height: 7rem;
+}

@@ -1,0 +1,32 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+}
+
+:root {
+  --black-font: #222222;
+  --max-width: 1200px;
+  --main-width: 90%;
+  --navbar-padding: 1.5rem;
+}
+body,
+html {
+  color: var(--black-font);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fffdfa;
+}
+main {
+  max-width: var(--main-width);
+  width: var(--main-width);
+  margin: 0 auto;
+  height: 1000px;
+}
+footer {
+  background-color: #222222;
+  height: 500px;
+}
