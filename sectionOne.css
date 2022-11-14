@@ -1,0 +1,20 @@
+.default__section {
+  width: 100%;
+}
+.medicals {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  margin: auto;
+}
+.medicals__token {
+  opacity: 0.9;
+  padding: 1.5rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-specs);
+}
+.medicals__token > img {
+  width: 2.5rem;
+  height: 2.5rem;
+}

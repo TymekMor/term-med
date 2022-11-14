@@ -6,6 +6,7 @@
   text-decoration: none;
   padding: 0;
   color: inherit;
+  list-style: none;
   transition: 200ms color;
 }
 button {
@@ -30,10 +31,10 @@ html {
   background-color: var(--white-color);
 }
 main {
-  max-width: var(--main-width);
+  max-width: var(--max-width);
   width: var(--main-width);
   margin: 0 auto;
-  height: 1000px;
+  padding: 15rem 0;
 }
 footer {
   display: block;
