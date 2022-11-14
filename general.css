@@ -5,19 +5,29 @@
   margin: 0;
   text-decoration: none;
   padding: 0;
+  color: inherit;
+  transition: 200ms color;
+}
+button {
+  background: none;
+  border: none;
 }
 :root {
-  --black-font: #222222;
+  --black-color: #222222;
+  --white-color: #fffdfa;
   --max-width: 1200px;
   --main-width: 90%;
   --navbar-padding: 1.5rem;
+  --blue-color: rgb(0, 195, 255);
+  --green-color: rgb(91, 221, 11);
+  --shadow-specs: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 body,
 html {
-  color: var(--black-font);
+  color: var(--black-color);
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
-  background-color: #fffdfa;
+  background-color: var(--white-color);
 }
 main {
   max-width: var(--main-width);
@@ -26,6 +36,7 @@ main {
   height: 1000px;
 }
 footer {
+  display: block;
   background-color: #222222;
   height: 500px;
 }
