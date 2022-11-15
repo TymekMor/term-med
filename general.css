@@ -22,6 +22,7 @@ button {
   --blue-color: rgb(0, 195, 255);
   --green-color: rgb(91, 221, 11);
   --shadow-specs: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  --light-borders: 1px solid rgba(131, 131, 131, 0.605);
 }
 body,
 html {
@@ -33,8 +34,10 @@ html {
 main {
   max-width: var(--max-width);
   width: var(--main-width);
-  margin: 0 auto;
+  margin: 1rem auto;
   padding: 15rem 0;
+  border: var(--light-borders);
+  border-radius: 1rem;
 }
 footer {
   display: block;
