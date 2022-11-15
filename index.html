@@ -14,26 +14,36 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <script src="./navbar.js" defer></script>
   </head>
-  <body>
-    <nav class="navbar">
+  <body class="enable__scrolling">
+    <nav class="navbar" id="navbar">
       <div class="navbar__logo">
         <a href="#"><img src="./images/logo-removebg-preview.png" /></a>
       </div>
-      <ul class="navbar__list">
-        <li class="navbar__element">
-          <a href="#">O nas</a>
-        </li>
+      <ul class="navbar__list" id="navbarList">
+        <a href="#"><li class="navbar__element">O nas</li> </a>
         <a href="#"> <li class="navbar__element">Produkty</li></a>
-        <a href=""
+        <a href="#"
           ><li class="navbar__element navbar__element--gradient">Kontakt</li></a
         >
-        <li class="navbar__switch">
-          <a>EN</a><span>&#8249;</span>
-          <div class="navbar__dropdown">PL</div>
+        <li class="navbar__switch" id="navbarSwitch">
+          <p>EN</p>
+          <span>&#8249;</span>
+          <div class="navbar__switch__dropdown">PL</div>
         </li>
       </ul>
+      <button class="navbar__bars" id="hamburger__menu">
+        <img src="./images/bars-solid.svg" />
+      </button>
     </nav>
+    <div class="navbar__dropdown" id="navbar__dropdown">
+      <ul>
+        <a href="#"><li class="navbar__dropdown__element">O nas</li> </a>
+        <a href="#"> <li class="navbar__dropdown__element">Produkty</li></a>
+        <a href="#"><li class="navbar__dropdown__element">Kontakt</li></a>
+      </ul>
+    </div>
     <main>
       <section class="default__section">
         <ul class="medicals">
@@ -51,7 +61,7 @@
           </li>
         </ul>
       </section>
-      <section class="default__section"></section>
+      <section class="default__section" id="sectionTwo"></section>
     </main>
     <footer></footer>
   </body>
