@@ -18,13 +18,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.25em 1.75em;
+  padding: 1.5em 1.75em;
 }
 .navbar__element:hover {
-  color: var(--blue-color);
+  color: var(--blue-two);
 }
 .navbar__element--gradient {
-  background: linear-gradient(rgb(0, 195, 255), rgb(91, 221, 11));
+  background: linear-gradient(var(--blue-two), var(--green-two));
   box-shadow: var(--shadow-specs);
   color: var(--white-color);
   border-radius: 1rem;
@@ -34,7 +34,7 @@
   color: var(--white-color);
 }
 .navbar__logo > a > img {
-  height: 7rem;
+  height: 6rem;
 }
 /* language switch in horizontal nav */
 .navbar__switch {
@@ -75,7 +75,7 @@
   transform: rotate(-90deg);
 }
 .navbar__switch__dropdown:hover {
-  color: var(--blue-color);
+  color: var(--blue-two);
 }
 /*hamburger menu*/
 .navbar__bars {
@@ -103,7 +103,8 @@
 }
 .navbar__dropdown > ul {
   width: var(--main-width);
-  background-color: lightcyan;
+  background-color: var(--white-color);
+  border-radius: 2rem;
   margin: 0 auto;
   padding: 2em 2em;
   font-size: 1.75rem;
@@ -113,11 +114,50 @@
 .navbar__dropdown__element {
   font-style: italic;
   color: var(--black-color);
+  cursor: pointer;
 }
 .navbar__dropdown__element:hover {
-  color: var(--blue-color);
+  color: var(--blue-two);
 }
-
+.navbar__dropdown__language {
+  display: flex;
+  justify-content: end;
+}
+.navbar__dropdown__language > button {
+  padding: 1em 1.25em;
+  cursor: pointer;
+  color: var(--black-color);
+  font-size: 1.25rem;
+}
+.navbar__dropdown__language > button:last-child {
+  border-left: 1px solid var(--black-color);
+}
+.navbar__dropdown__language > button:hover {
+  color: var(--blue-two);
+}
+.navbar__dropdown__title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: bold;
+  border-radius: 1rem 1rem 0rem 0rem;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  box-shadow: var(--shadow-specs);
+  position: relative;
+  cursor: default;
+}
+.navbar__dropdown__title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 0rem 0rem 1rem 1rem;
+  height: 0.5rem;
+  background: linear-gradient(90deg, var(--blue-two), var(--green-two));
+  box-shadow: var(--shadow-specs);
+  width: 100%;
+}
 .visible {
   display: block;
 }
