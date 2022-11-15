@@ -35,7 +35,7 @@ main {
   max-width: var(--max-width);
   width: var(--main-width);
   margin: 1rem auto;
-  padding: 15rem 0;
+  padding: 10rem 0;
   border: var(--light-borders);
   border-radius: 1rem;
 }
