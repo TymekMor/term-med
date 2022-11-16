@@ -29,4 +29,5 @@ window.addEventListener("resize", () => {
     hamburgerMenu.classList.remove("open");
   }
 });
+
 console.log(window.innerWidth);

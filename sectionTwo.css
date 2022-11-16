@@ -1,0 +1,41 @@
+.medicals {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+.medicals__token {
+  opacity: 0;
+  padding: 1.5em;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-specs);
+  transform: translateX(-100%);
+  transition: 400ms opacity, 400ms transform ease-in-out;
+}
+.medicals__token:nth-child(2) {
+  transition-delay: 200ms;
+}
+.medicals__token:nth-child(3) {
+  transition-delay: 400ms;
+}
+.medicals__token:nth-child(4) {
+  transition-delay: 600ms;
+}
+.medicals__token > img {
+  width: 2rem;
+  height: 2rem;
+}
+.medicals__token--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media only screen and (min-width: 0px) and (max-width: 750px) {
+  .medicals {
+    width: 100%;
+  }
+  .medicals__token > img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

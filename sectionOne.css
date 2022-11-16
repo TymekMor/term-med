@@ -1,33 +1,35 @@
-.medicals {
-  display: flex;
-  width: 50%;
-  justify-content: space-between;
-  margin: auto;
+.default__section__one {
+  position: relative;
 }
-.medicals:hover .medicals__token {
-  opacity: 1;
-  transform: translateX(0);
+.default__section__one h1 {
+  font-style: italic;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
 }
-.medicals__token {
-  opacity: 0.9;
-  padding: 1.5rem;
+.default__section__one h1 > span:first-child {
+  color: var(--blue-color);
+}
+.default__section__one h1 > span:last-child {
+  color: var(--green-color);
+}
+.default__section__one p {
+  line-height: 1.75rem;
+  max-width: 80%;
+}
+.trust__token {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
   border: 1px solid gray;
+  opacity: 0.9;
   border-radius: 1rem;
   box-shadow: var(--shadow-specs);
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: 400ms opacity, 400ms transform ease-in-out;
+  padding: 1.5rem;
+  z-index: 100;
 }
-.medicals__token:nth-child(2) {
-  transition-delay: 200ms;
+.trust__token > img {
+  width: 2rem;
+  height: 2rem;
 }
-.medicals__token:nth-child(3) {
-  transition-delay: 400ms;
-}
-.medicals__token:nth-child(4) {
-  transition-delay: 600ms;
-}
-.medicals__token > img {
-  width: 2.5rem;
-  height: 2.5rem;
+@media only screen and (min-width: 0px) and (max-width: 750px) {
 }

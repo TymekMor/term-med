@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>term-med</title>
     <link rel="stylesheet" href="./general.css" />
+    <link rel="stylesheet" href="./hamburger.css" />
     <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./sectionOne.css" />
+    <link rel="stylesheet" href="./sectionTwo.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="./sectionOne.css" />
-    <link rel="stylesheet" href="./hamburger.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <script src="./navbar.js" defer></script>
+    <script src="./intersectionObserver.js" defer></script>
   </head>
 
   <body>
+    <!-- Here starts horizontal navbar-->
     <nav class="navbar" id="navbar">
       <div class="navbar__logo">
         <a href="#"><img src="./images/logo-removebg-preview.png" /></a>
@@ -42,6 +46,7 @@
         <span></span>
       </div>
     </nav>
+    <!-- here starts vertical navbar -->
     <div class="navbar__dropdown" id="navbar__dropdown">
       <ul>
         <li class="navbar__dropdown__element">O nas</li>
@@ -54,8 +59,18 @@
         <li class="navbar__dropdown__title">Term-Med</li>
       </ul>
     </div>
+    <!--here starts main content of the page-->
     <main>
-      <section class="default__section">
+      <section class="default__section default__section__one" id="sectionOne">
+        <h1>Witamy w <span>Term</span>-<span>Med</span></h1>
+        <p>
+          Jesteśmy Polską firmą z ponad 15 letnim doświadczeniem. Od 2005 roku
+          zdobywamy doświadczenie i wiedzę, które pozwoliły nam osiągnąć
+          stabilną pozycję na rynku.
+        </p>
+      </section>
+
+      <section class="default__section default__section__two" id="sectionTwo">
         <ul class="medicals">
           <li class="medicals__token">
             <img src="./images/briefcase-medical-solid.svg" />
@@ -71,7 +86,6 @@
           </li>
         </ul>
       </section>
-      <section class="default__section" id="sectionTwo"></section>
     </main>
     <footer></footer>
   </body>
