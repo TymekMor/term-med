@@ -77,19 +77,6 @@
 .navbar__switch__dropdown:hover {
   color: var(--blue-two);
 }
-/*hamburger menu*/
-.navbar__bars {
-  background: none;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  height: 2rem;
-  border-radius: 0.5rem;
-  display: none;
-}
-.navbar__bars > img {
-  height: 100%;
-}
 /*navbar dropdown styles*/
 
 .navbar__dropdown {
@@ -161,6 +148,7 @@
 .visible {
   display: block;
 }
+
 @media only screen and (min-width: 0px) and (max-width: 750px) {
   .navbar__list {
     display: none;

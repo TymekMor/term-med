@@ -17,6 +17,16 @@ switchElement.addEventListener("click", (event) => {
 
 hamburgerMenu.addEventListener("click", () => {
   window.scrollTo(0, 0);
+  hamburgerMenu.classList.toggle("open");
   document.body.classList.toggle("disable__scrolling");
   navbarDropDown.classList.toggle("visible");
 });
+// chujowa FUNCKJA do wymiany w pizdu
+window.addEventListener("resize", () => {
+  console.log("h1");
+  if (window.innerWidth > 750) {
+    navbarDropDown.classList.remove("visible");
+    hamburgerMenu.classList.remove("open");
+  }
+});
+console.log(window.innerWidth);
