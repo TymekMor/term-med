@@ -59,6 +59,7 @@
   display: none;
   padding: 1.5em 0em;
   text-align: center;
+  z-index: 10;
   width: 4rem;
   opacity: 0.9;
   background-color: var(--white-color);
@@ -86,7 +87,7 @@
   top: 132px;
   background-color: var(--white-color);
   display: none;
-  z-index: 20;
+  z-index: 1000;
 }
 .navbar__dropdown > ul {
   width: var(--main-width);

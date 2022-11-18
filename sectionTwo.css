@@ -7,11 +7,12 @@
 .medicals__token {
   opacity: 0;
   padding: 1.5em;
-  border: 1px solid gray;
+  border: 1px solid lightgray;
+  background-color: var(--white-color);
   border-radius: 1rem;
   box-shadow: var(--shadow-specs);
   transform: translateX(-100%);
-  transition: 400ms opacity, 400ms transform ease-in-out;
+  transition: 500ms opacity, 500ms transform ease-in;
 }
 .medicals__token:nth-child(2) {
   transition-delay: 200ms;
@@ -30,6 +31,29 @@
   opacity: 1;
   transform: translateX(0);
 }
+.default__section__two > div {
+  display: flex;
+  padding: 3rem 0;
+  justify-content: center;
+}
+.our__offer {
+  padding: 1rem 2rem;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  transition: 500ms all;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.our__offer:hover {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.our__offer--visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 750px) {
   .medicals {
     width: 100%;

@@ -1,9 +1,11 @@
 .default__section__one {
   position: relative;
+  border-bottom: 1px solid lightgray;
 }
 .default__section__one h1 {
   font-style: italic;
-  font-size: 1.75rem;
+  font-size: 2rem;
+  text-transform: uppercase;
   margin-bottom: 2rem;
 }
 .default__section__one h1 > span:first-child {
@@ -13,15 +15,16 @@
   color: var(--green-color);
 }
 .default__section__one p {
-  line-height: 1.75rem;
+  line-height: 2rem;
   max-width: 80%;
 }
+
 .trust__token {
   position: absolute;
-  bottom: 0;
-  right: 10%;
-  border: 1px solid gray;
-  opacity: 0.9;
+  right: 2rem;
+  bottom: -2rem;
+  border: 1px solid lightgray;
+  background-color: var(--white-color);
   border-radius: 1rem;
   box-shadow: var(--shadow-specs);
   padding: 1.5rem;
@@ -31,5 +34,10 @@
   width: 2rem;
   height: 2rem;
 }
+
 @media only screen and (min-width: 0px) and (max-width: 750px) {
+  .trust__token > img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
