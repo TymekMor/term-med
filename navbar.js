@@ -26,6 +26,7 @@ window.addEventListener("resize", () => {
   console.log("h1");
   if (window.innerWidth > 750) {
     navbarDropDown.classList.remove("visible");
+    document.body.classList.remove("disable__scrolling");
     hamburgerMenu.classList.remove("open");
   }
 });

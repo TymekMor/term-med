@@ -44,9 +44,13 @@ main {
   border: 1px solid lightgray;
   border-radius: 1rem;
 }
+main > section:last-child {
+  border-bottom: none;
+}
 .default__section {
   width: 100%;
-  padding: 25rem 5rem;
+  padding: 15rem 5rem;
+  border-bottom: 1px solid lightgray;
 }
 footer {
   display: block;
@@ -64,7 +68,4 @@ footer {
 }
 
 @media only screen and (min-width: 751px) {
-  .disable__scrolling {
-    overflow: auto;
-  }
 }
