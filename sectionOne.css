@@ -3,9 +3,14 @@
 }
 .default__section__one > h1 {
   font-style: italic;
-  font-size: 2rem;
+  display: inline-block;
+  font-size: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  background-image: linear-gradient(-90deg, var(--blue-two), var(--green-two));
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .default__section__one > h1 > span:first-child {
   color: var(--blue-color);
