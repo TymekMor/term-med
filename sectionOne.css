@@ -41,3 +41,22 @@
     height: 1.5rem;
   }
 }
+.default__section__one__en__version{
+  display:none;
+}
+.default__section__one__header__and__button{
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+}
+.default__section__one__mission{
+
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+ 
+  transition: 500ms all;
+  
+  
+
+}
+
