@@ -1,3 +1,8 @@
-.deafault__section__offer {
+.deafult__section__offer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.not__visible {
   display: none;
 }

@@ -17,7 +17,10 @@ const navbarDropDownList = document
 const sectionOneList = document
   .getElementById("sectionOne")
   .querySelectorAll("h1, p");
-const mainSections = document.querySelectorAll(".default__section");
+const mainSections = document.querySelectorAll(
+  ".default__section__one, .default__section__two, footer"
+);
+console.log(mainSections);
 
 // function that is responsible for changing the language on the site
 switchElement.addEventListener("click", (event) => {

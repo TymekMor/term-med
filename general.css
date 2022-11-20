@@ -61,6 +61,12 @@ footer {
   height: 100%;
   overflow: hidden;
 }
+.visible {
+  display: block;
+}
+.not__visible {
+  display: none;
+}
 @media only screen and (min-width: 0px) and (max-width: 750px) {
   .default__section {
     padding: 8rem 2rem;
@@ -68,4 +74,7 @@ footer {
 }
 
 @media only screen and (min-width: 751px) {
+  .visible {
+    display: none;
+  }
 }
