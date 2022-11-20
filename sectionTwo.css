@@ -56,10 +56,13 @@
 
 @media only screen and (min-width: 0px) and (max-width: 750px) {
   .medicals {
-    width: 100%;
+    width: 80%;
   }
   .medicals__token > img {
     width: 1.5rem;
     height: 1.5rem;
+  }
+  .medicals__token:last-child {
+    display: none;
   }
 }

@@ -1,6 +1,5 @@
 const medical_list = document.querySelectorAll(".medicals__token");
 const offer_token = document.querySelectorAll(".our__offer");
-console.log(offer_token);
 const observerOne = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
