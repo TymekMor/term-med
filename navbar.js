@@ -15,13 +15,17 @@ const navbarDropDownList = document
   .querySelectorAll(".navbar__dropdown__element");
 
 const sectionOneList = document
-  .getElementById("sectionOne")
+  .querySelector("main")
+  .querySelector(".default__section__one")
   .querySelectorAll("h1, p");
-const mainSections = document.querySelectorAll(
-  ".default__section__one, .default__section__two, footer"
-);
-console.log(mainSections);
 
+const mainSections = document
+  .querySelector("main")
+  .querySelectorAll(".default__section__one, .default__section__two");
+
+const footer = document.querySelector("footer");
+const sectionsToScroll = [...mainSections, footer];
+console.log(sectionsToScroll);
 // function that is responsible for changing the language on the site
 switchElement.addEventListener("click", (event) => {
   const currentLanguage = event.target.closest("li").querySelector("p");
@@ -95,19 +99,25 @@ window.addEventListener("resize", () => {
 // navbar buttons handlers ( slide into section )
 
 const headerButtonHandler = (elements) => {
-  for (let i = 0; i < mainSections.length; i++) {
+  for (let i = 0; i < sectionsToScroll.length; i++) {
     elements[i].addEventListener("click", () => {
-      mainSections[i].scrollIntoView({ behavior: "smooth", block: "start" });
+      sectionsToScroll[i].scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     });
   }
 };
 const dropdownHeaderButtonHandler = (elements) => {
-  for (let i = 0; i < mainSections.length; i++) {
+  for (let i = 0; i < sectionsToScroll.length; i++) {
     elements[i].addEventListener("click", () => {
       hamburgerMenu.classList.toggle("open");
       document.body.classList.toggle("disable__scrolling");
       navbarDropDown.classList.toggle("visible");
-      mainSections[i].scrollIntoView({ behavior: "smooth", block: "start" });
+      sectionsToScroll[i].scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     });
   }
 };

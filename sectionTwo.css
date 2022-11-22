@@ -1,3 +1,6 @@
+.default__section__two {
+  background: linear-gradient(rgb(43, 172, 226, 0.8), rgb(91, 221, 11, 0.8));
+}
 .medicals {
   display: flex;
   justify-content: space-between;
@@ -38,7 +41,8 @@
 }
 .our__offer {
   padding: 1rem 2rem;
-  border: 1px solid lightgray;
+  border: 2px solid var(--white-color);
+  background-color: var(--white-color);
   border-radius: 1rem;
   font-size: 1.25rem;
   transition: 500ms all;
@@ -46,7 +50,7 @@
   opacity: 0;
 }
 .our__offer:hover {
-  background-color: var(--black-color);
+  background-color: transparent;
   color: var(--white-color);
 }
 .our__offer--visible {

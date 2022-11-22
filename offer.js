@@ -29,17 +29,18 @@ const mainContainer = document.querySelector("main");
 
 const renderOfferPage = () => {
   removeChildNodes(mainContainer);
+  document.body.dataset.page = "offer";
   const cloneOfferPage = offerPage.content.cloneNode(true);
   const gobackButton = document.createElement("button");
   gobackButton.textContent = "GO BACK";
   gobackButton.addEventListener("click", renderMainPage);
-  document.body.dataset.page = "offer";
   mainContainer.appendChild(cloneOfferPage);
   mainContainer.appendChild(gobackButton);
   window.scrollTo(0, 0);
 };
 const renderMainPage = () => {
   removeChildNodes(mainContainer);
+  document.body.dataset.page = "main";
   const cloneMainPage = mainPage.content.cloneNode(true);
   mainContainer.appendChild(cloneMainPage);
   mainContainer
