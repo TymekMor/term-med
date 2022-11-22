@@ -43,6 +43,7 @@ main {
   margin: 1rem auto;
   border: 1px solid lightgray;
   border-radius: 1rem;
+  overflow: hidden;
 }
 main > section:last-child {
   border-bottom: none;

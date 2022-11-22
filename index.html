@@ -23,7 +23,7 @@
     <script src="./offer.js" defer></script>
   </head>
 
-  <body data-lang="PL">
+  <body data-lang="PL" data-page="main">
     <!-- Here starts horizontal navbar-->
     <nav class="navbar" id="navbar">
       <div class="navbar__logo">
@@ -60,6 +60,86 @@
       </ul>
     </div>
     <!--here starts main content of the page-->
+
+    <template id="mainPage">
+      <section class="default__section default__section__one" id="sectionOne">
+        <h1>Witamy w Term-Med</h1>
+        <p>
+          Jesteśmy Polską firmą z ponad 15 letnim doświadczeniem. Od 2005 roku
+          zdobywamy doświadczenie i wiedzę, które pozwoliły nam osiągnąć
+          stabilną pozycję na rynku.
+        </p>
+        <p>
+          Specjalizujemy się w dostarczaniu wyrobów medycznych jednorazowego
+          użytku i środków pomocniczych
+        </p>
+
+        <div class="trust__token">
+          <img src="./images/handshake-regular.svg" />
+        </div>
+      </section>
+      <section class="default__section default__section__two" id="sectionTwo">
+        <ul class="medicals">
+          <li class="medicals__token">
+            <img src="./images/briefcase-medical-solid.svg" />
+          </li>
+          <li class="medicals__token">
+            <img src="./images/stethoscope-solid.svg" />
+          </li>
+          <li class="medicals__token">
+            <img src="./images/syringe-solid.svg" />
+          </li>
+          <li class="medicals__token">
+            <img src="./images/vials-solid.svg" />
+          </li>
+        </ul>
+        <div>
+          <button class="our__offer" id="our__offer">
+            Poznaj naszą ofertę
+          </button>
+        </div>
+      </section>
+    </template>
+
+    <template id="offerPage">
+      <section
+        class="default__section deafult__section__offer"
+        id="sectionOffer"
+      >
+        <header class="deafult__section__offer__header">
+          <h1>Oferta</h1>
+          <p>
+            Term-med jest dynamiczną firmą w Polsce specjalizującą się w
+            produkcji wyrobów medycznych
+          </p>
+        </header>
+        <div class="product__card">
+          <img src="./images/strzykawka2ml.png" />
+          <h1>Strzykawka, 2ml</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="product__card">
+          <img src="./images/strzykawka5ml.png" />
+          <h1>Strzykawka, 5ml</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="product__card">
+          <img src="./images/przyrzad_do_infuzji.png" />
+          <h1>Przyrzad do infuzji</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="product__card">
+          <img src="./images/wenflon.png" />
+          <h1>Wenflon</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="product__card">
+          <img src="./images/woreczek_do_probki_moczu.png" />
+          <h1>Woreczek do probki moczu</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </section>
+    </template>
     <main>
       <section class="default__section default__section__one" id="sectionOne">
         <h1>Witamy w Term-Med</h1>
@@ -97,36 +177,6 @@
           <button class="our__offer" id="our__offer">
             Poznaj naszą ofertę
           </button>
-        </div>
-      </section>
-      <section
-        class="default__section deafult__section__offer not__visible"
-        id="sectionOffer"
-      >
-        <div class="product__card">
-          <img src="./images/strzykawka2ml.png" />
-          <h1>Strzykawka, 2ml</h1>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="product__card">
-          <img src="./images/strzykawka5ml.png" />
-          <h1>Strzykawka, 2ml</h1>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="product__card">
-          <img src="./images/przyrzad_do_infuzji.png" />
-          <h1>Strzykawka, 2ml</h1>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="product__card">
-          <img src="./images/wenflon.png" />
-          <h1>Strzykawka, 2ml</h1>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="product__card">
-          <img src="./images/woreczek_do_probki_moczu.png" />
-          <h1>Strzykawka, 2ml</h1>
-          <p>Lorem ipsum dolor sit amet.</p>
         </div>
       </section>
     </main>
