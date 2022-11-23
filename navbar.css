@@ -5,9 +5,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--navbar-padding);
+  padding: 1rem var(--navbar-padding);
   position: relative;
   border-radius: 1rem;
+  background: linear-gradient(45deg, var(--blue-color), 3%, var(--white-color));
 }
 .navbar__list {
   list-style: none;
