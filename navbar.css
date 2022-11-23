@@ -35,8 +35,9 @@
 .navbar__element--gradient:hover {
   color: var(--white-color);
 }
-.navbar__logo > a > img {
+.navbar__logo > img {
   height: 6rem;
+  cursor: pointer;
 }
 /* language switch in horizontal nav */
 .navbar__switch {
@@ -150,6 +151,9 @@
 }
 .visible {
   display: block;
+}
+.not-visible {
+  display: none;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 750px) {

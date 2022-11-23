@@ -8,6 +8,7 @@
   color: inherit;
   list-style: none;
   transition: 200ms color;
+  font-family: inherit;
 }
 button {
   background: none;
@@ -51,7 +52,7 @@ main > section:last-child {
 }
 .default__section {
   width: 100%;
-  padding: 15rem 5rem;
+  padding: 10rem 5rem;
   border-bottom: 1px solid lightgray;
 }
 footer {

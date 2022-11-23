@@ -20,8 +20,10 @@
 }
 .default__section__one p {
   line-height: 2rem;
+  margin-bottom: 1rem;
   max-width: 80%;
 }
+
 .trust__token {
   position: absolute;
   right: 2rem;

@@ -2,7 +2,7 @@ const switchElement = document
   .getElementById("navbarSwitch")
   .querySelector("div");
 const dropdownSwitchElement = document.getElementById("navbarDropdownSwitch");
-
+const navbarLogo = document.querySelector(".navbar__logo");
 const hamburgerMenu = document.getElementById("hamburger__menu");
 const navbarDropDown = document.getElementById("navbar__dropdown");
 const navbarList = document
@@ -216,16 +216,21 @@ const renderOfferPage = () => {
   removeChildNodes(mainContainer);
   document.body.dataset.page = "offer";
   const cloneOfferPage = offerPageTemplate.content.cloneNode(true);
-  const gobackButton = document.createElement("button");
-  gobackButton.textContent = "GO BACK";
-  gobackButton.addEventListener("click", renderMainPage);
   mainContainer.appendChild(cloneOfferPage);
-  mainContainer.appendChild(gobackButton);
   if (document.body.dataset.lang === "PL") {
     setLangOffer(polishVersion);
   } else {
     setLangOffer(englishVersion);
   }
+  for (let i = 0; i < 2; i++) {
+    navbarList[i].classList.add("not-visible");
+    navbarDropDownList[i].classList.add("not-visible");
+  }
+  mainContainer
+    .querySelector(".deafult__section__offer__header")
+    .querySelector("button")
+    .addEventListener("click", renderMainPage);
+  navbarLogo.addEventListener("click", renderMainPage);
 
   window.scrollTo(0, 0);
 };
@@ -249,6 +254,13 @@ const renderMainPage = () => {
   } else {
     setLangMain(englishVersion);
   }
+  for (let i = 0; i < 2; i++) {
+    navbarList[i].classList.remove("not-visible");
+    navbarDropDownList[i].classList.remove("not-visible");
+  }
+  headerButtonHandler(navbarList);
+  dropdownHeaderButtonHandler(navbarDropDownList);
+  navbarLogo.removeEventListener("click", renderMainPage);
   window.scrollTo(0, 0);
 };
 const removeChildNodes = (parent) => {
