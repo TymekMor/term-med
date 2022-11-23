@@ -45,7 +45,7 @@
   background-color: var(--white-color);
   border-radius: 1rem;
   font-size: 1.25rem;
-  transition: 500ms all;
+  transition: 200ms all;
   transform: translateY(100%);
   opacity: 0;
 }

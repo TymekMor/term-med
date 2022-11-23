@@ -1,4 +1,3 @@
-const navbar = document.getElementById("navbar");
 const switchElement = document
   .getElementById("navbarSwitch")
   .querySelector("div");
@@ -14,71 +13,120 @@ const navbarDropDownList = document
   .getElementById("navbar__dropdown")
   .querySelectorAll(".navbar__dropdown__element");
 
-const sectionOneList = document
-  .querySelector("main")
-  .querySelector(".default__section__one")
-  .querySelectorAll("h1, p");
-
 const mainSections = document
   .querySelector("main")
   .querySelectorAll(".default__section__one, .default__section__two");
 
+const sectionOneElements = mainSections[0].querySelectorAll("h1, p");
+const sectionTwoElements = mainSections[1].querySelector(".our__offer");
+
 const footer = document.querySelector("footer");
 const sectionsToScroll = [...mainSections, footer];
-console.log(sectionsToScroll);
-// function that is responsible for changing the language on the site
+
+// function that is responsible for changing the language on the site ------------------------------
 switchElement.addEventListener("click", (event) => {
   const currentLanguage = event.target.closest("li").querySelector("p");
   const anotherLanguage = event.target.closest("div");
   const temp = currentLanguage.innerText;
   currentLanguage.innerText = anotherLanguage.innerText;
   anotherLanguage.innerText = temp;
-  changeLanugage();
+  if (document.body.dataset.page === "main") {
+    changeLanugageMain();
+  } else {
+    changeLanugageOffer();
+  }
 });
 dropdownSwitchElement.addEventListener("click", (event) => {
   if (
-    // there is problem with event on EN button !!!!!!!!!!
     event.target.closest("button").textContent !== document.body.dataset.lang
   ) {
-    changeLanugage();
+    if (document.body.dataset.page === "main") {
+      changeLanugageMain();
+    } else {
+      changeLanugageOffer();
+    }
+
+    const currentLanguage = document
+      .getElementById("navbarSwitch")
+      .querySelector("p");
+    const anotherLanguage = document
+      .getElementById("navbarSwitch")
+      .querySelector("div");
+    const temp = currentLanguage.innerText;
+    currentLanguage.innerText = anotherLanguage.innerText;
+    anotherLanguage.innerText = temp;
   }
 });
-const changeLanugage = () => {
-  const englishVersion = {
-    id: "EN",
-    navbarText: ["About Us", "Products", "Contact"],
-    sectionOne: [
-      "Welcome to Term-Med",
-      "We are the polish company with more than 15 years of experience in the industry. Since 2005, Term-medd company is being conscientiously developed which made it achieve a very strong position on the market.",
-      "We specialize in delivering disposable medical products and auxiliary measures ",
-    ],
-  };
-  const polishVersion = {
-    id: "PL",
-    navbarText: ["O nas", "Produkty", "Kontakt"],
-    sectionOne: [
-      "WITAMY W TERM-MED",
-      "Jesteśmy Polską firmą z ponad 15 letnim doświadczeniem. Od 2005 roku zdobywamy doświadczenie i wiedzę, które pozwoliły nam osiągnąć stabilną pozycję na rynku.",
-      "Specjalizujemy się w dostarczaniu wyrobów medycznych jednorazowego użytku i środków pomocniczych",
-    ],
-  };
+//-----------------------------------------------------------------------------------
+const englishVersion = {
+  id: "EN",
+  navbarText: ["About Us", "Products", "Contact"],
+  sectionOne: [
+    "Welcome to Term-Med",
+    "We are the polish company with more than 15 years of experience in the industry. Since 2005, Term-med company is being conscientiously developed which made it achieve a very strong position on the market.",
+    "We specialize in delivering disposable medical products and auxiliary measures ",
+  ],
+  sectionTwo: "Our Offer",
+  // OFFER PAGE ------
+  header: ["Our Mission", "Our mission is to..."],
+};
+const polishVersion = {
+  id: "PL",
+  navbarText: ["O nas", "Produkty", "Kontakt"],
+  sectionOne: [
+    "WITAMY W TERM-MED",
+    "Jesteśmy Polską firmą z ponad 15 letnim doświadczeniem. Od 2005 roku zdobywamy doświadczenie i wiedzę, które pozwoliły nam osiągnąć stabilną pozycję na rynku.",
+    "Specjalizujemy się w dostarczaniu wyrobów medycznych jednorazowego użytku i środków pomocniczych",
+  ],
+  sectionTwo: "Poznaj naszą ofertę",
+  // OFFER PAGE ------
+  header: [
+    "Nasza Misja",
+    "Naszą misją jest pomoc Polskim szpitalom. Wypełniamy ją codziennie dystrybuując niezbędne wyroby medyczne",
+  ],
+};
+const changeLanugageMain = () => {
   if (document.body.dataset.lang === "PL") {
-    whichVersion(englishVersion);
+    setLangMain(englishVersion);
+    document.body.dataset.lang = englishVersion.id;
   } else {
-    whichVersion(polishVersion);
+    setLangMain(polishVersion);
+    document.body.dataset.lang = polishVersion.id;
   }
 };
-// helper function
-const whichVersion = (version) => {
-  document.body.dataset.lang = version.id;
+const setLangMain = (version) => {
+  const mainSections = document
+    .querySelector("main")
+    .querySelectorAll(".default__section__one, .default__section__two");
+  const sectionOneElements = mainSections[0].querySelectorAll("h1, p");
+  const sectionTwoElements = mainSections[1].querySelector(".our__offer");
+  setLanguageNavbar(version);
+  for (let i = 0; i < version.sectionOne.length; i++) {
+    sectionOneElements[i].textContent = version.sectionOne[i];
+  }
+  sectionTwoElements.textContent = version.sectionTwo;
+};
+const changeLanugageOffer = () => {
+  if (document.body.dataset.lang === "PL") {
+    setLangOffer(englishVersion);
+    document.body.dataset.lang = englishVersion.id;
+  } else {
+    setLangOffer(polishVersion);
+    document.body.dataset.lang = polishVersion.id;
+  }
+};
+const setLangOffer = (version) => {
+  setLanguageNavbar(version);
+};
+
+const setLanguageNavbar = (version) => {
   for (let i = 0; i < version.navbarText.length; i++) {
     navbarList[i].textContent = version.navbarText[i];
     navbarDropDownList[i].textContent = version.navbarText[i];
   }
-  for (let i = 0; i < version.sectionOne.length; i++) {
-    sectionOneList[i].textContent = version.sectionOne[i];
-  }
 };
+
+const setLanguage = () => {};
 
 // hamburger menu handler
 hamburgerMenu.addEventListener("click", () => {
@@ -99,6 +147,10 @@ window.addEventListener("resize", () => {
 // navbar buttons handlers ( slide into section )
 
 const headerButtonHandler = (elements) => {
+  const mainSections = document
+    .querySelector("main")
+    .querySelectorAll(".default__section__one, .default__section__two");
+  const sectionsToScroll = [...mainSections, footer];
   for (let i = 0; i < sectionsToScroll.length; i++) {
     elements[i].addEventListener("click", () => {
       sectionsToScroll[i].scrollIntoView({
@@ -109,6 +161,10 @@ const headerButtonHandler = (elements) => {
   }
 };
 const dropdownHeaderButtonHandler = (elements) => {
+  const mainSections = document
+    .querySelector("main")
+    .querySelectorAll(".default__section__one, .default__section__two");
+  const sectionsToScroll = [...mainSections, footer];
   for (let i = 0; i < sectionsToScroll.length; i++) {
     elements[i].addEventListener("click", () => {
       hamburgerMenu.classList.toggle("open");
@@ -121,7 +177,86 @@ const dropdownHeaderButtonHandler = (elements) => {
     });
   }
 };
+
 window.onload = () => {
   headerButtonHandler(navbarList);
   dropdownHeaderButtonHandler(navbarDropDownList);
 };
+
+const ourOffer = document.getElementById("our__offer");
+const Sections = document.querySelectorAll(
+  ".default__section__one, .default__section__two"
+);
+// intersection observer
+const medical_list = document.querySelectorAll(".medicals__token");
+const offer_token = document.querySelectorAll(".our__offer");
+const observerOne = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("medicals__token--visible");
+    }
+  });
+});
+const observerTwo = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("our__offer--visible");
+    }
+  });
+});
+medical_list.forEach((element) => observerOne.observe(element));
+offer_token.forEach((element) => observerTwo.observe(element));
+//-----------------------------------------------------------------------
+
+const mainPageTemplate = document.getElementById("mainPage");
+const offerPageTemplate = document.getElementById("offerPage");
+const mainContainer = document.querySelector("main");
+
+const renderOfferPage = () => {
+  removeChildNodes(mainContainer);
+  document.body.dataset.page = "offer";
+  const cloneOfferPage = offerPageTemplate.content.cloneNode(true);
+  const gobackButton = document.createElement("button");
+  gobackButton.textContent = "GO BACK";
+  gobackButton.addEventListener("click", renderMainPage);
+  mainContainer.appendChild(cloneOfferPage);
+  mainContainer.appendChild(gobackButton);
+  if (document.body.dataset.lang === "PL") {
+    setLangOffer(polishVersion);
+  } else {
+    setLangOffer(englishVersion);
+  }
+
+  window.scrollTo(0, 0);
+};
+
+const renderMainPage = () => {
+  removeChildNodes(mainContainer);
+  document.body.dataset.page = "main";
+  const cloneMainPage = mainPageTemplate.content.cloneNode(true);
+  mainContainer.appendChild(cloneMainPage);
+  mainContainer
+    .querySelectorAll(".medicals__token")
+    .forEach((element) => observerOne.observe(element));
+  mainContainer
+    .querySelectorAll(".our__offer")
+    .forEach((element) => observerTwo.observe(element));
+  mainContainer
+    .querySelector(".our__offer")
+    .addEventListener("click", renderOfferPage);
+  if (document.body.dataset.lang === "PL") {
+    setLangMain(polishVersion);
+  } else {
+    setLangMain(englishVersion);
+  }
+  window.scrollTo(0, 0);
+};
+const removeChildNodes = (parent) => {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+};
+
+ourOffer.addEventListener("click", () => {
+  renderOfferPage();
+});

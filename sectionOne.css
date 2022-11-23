@@ -22,7 +22,6 @@
   line-height: 2rem;
   max-width: 80%;
 }
-
 .trust__token {
   position: absolute;
   right: 2rem;
@@ -38,7 +37,6 @@
   width: 2rem;
   height: 2rem;
 }
-
 @media only screen and (min-width: 0px) and (max-width: 750px) {
   .trust__token > img {
     width: 1.5rem;

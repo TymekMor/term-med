@@ -7,6 +7,12 @@
   justify-items: center;
   padding: 4rem 0;
 }
+.deafult__section__offer__header {
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-specs);
+  padding: 2rem;
+}
 .deafult__section__offer__header > h1 {
   background-image: linear-gradient(-90deg, var(--blue-two), var(--green-two));
   background-size: 100%;
@@ -50,7 +56,7 @@
 
 @media only screen and (min-width: 0px) and (max-width: 750px) {
   .deafult__section__offer__products {
-    padding: 4rem 2rem;
+    padding: 2rem 0rem;
     grid-template-columns: repeat(1, 1fr);
   }
 }
