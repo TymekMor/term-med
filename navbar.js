@@ -65,10 +65,22 @@ const englishVersion = {
     "Welcome to Term-Med",
     "We are the polish company with more than 15 years of experience in the industry. Since 2005, Term-med company is being conscientiously developed which made it achieve a very strong position on the market.",
     "We specialize in delivering disposable medical products and auxiliary measures ",
+    "We deliver our products to the biggest wholesales and pharmacies in Poland. Market dynamics challenges us every day. The underlying rule of Term-Med company is to deliver quality products at a favorable price. Thanks to such policy, we meet our challenges and compete with products from international manufacturers. ",
   ],
   sectionTwo: "Our Offer",
   // OFFER PAGE ------
-  header: ["Our Mission", "Our mission is to..."],
+  header: [
+    "Our Mission",
+    "Our mission is to help Polish hospitals. We fullfill it by distributing essential medical products.",
+    "Go back to main page",
+  ],
+  products: [
+    "Disposable syringes 2, 5 ml",
+    "Disposable syringes 10, 20 ml",
+    "Infusion sets",
+    "Catheters",
+    "Urine bags for boys and girls",
+  ],
 };
 const polishVersion = {
   id: "PL",
@@ -77,12 +89,21 @@ const polishVersion = {
     "WITAMY W TERM-MED",
     "Jesteśmy Polską firmą z ponad 15 letnim doświadczeniem. Od 2005 roku zdobywamy doświadczenie i wiedzę, które pozwoliły nam osiągnąć stabilną pozycję na rynku.",
     "Specjalizujemy się w dostarczaniu wyrobów medycznych jednorazowego użytku i środków pomocniczych",
+    "Dostarczamy produkty do największych hurtowni i aptek w Polsce Dynamika rynku produktów medycznych codziennie stawia przed nami nowe wyzwania. Term-Med oferuje swoje produkty tylko w dobrej jakości icenie, dlatego możemy sprostać stawianym przez rynek wyzwaniom ikonkurować z produktami międzynarodowych wytwórców, przy jednoczesnym zachowaniu korzystnego poziomu cen.",
   ],
   sectionTwo: "Poznaj naszą ofertę",
   // OFFER PAGE ------
   header: [
     "Nasza Misja",
     "Naszą misją jest pomoc Polskim szpitalom. Wypełniamy ją codziennie dystrybuując niezbędne wyroby medyczne",
+    "Powrót do strony głównej",
+  ],
+  products: [
+    "Strzykawki jednorazowe 2, 5 ml",
+    "Strzykawki jednorazowe 10, 20 ml",
+    "Przyrządy do przetaczania płynów infuzyjnych",
+    "Wenflony",
+    "Woreczki do pobierania próbek moczu dla dziewczynek i chłopców",
   ],
 };
 const changeLanugageMain = () => {
@@ -91,6 +112,15 @@ const changeLanugageMain = () => {
     document.body.dataset.lang = englishVersion.id;
   } else {
     setLangMain(polishVersion);
+    document.body.dataset.lang = polishVersion.id;
+  }
+};
+const changeLanugageOffer = () => {
+  if (document.body.dataset.lang === "PL") {
+    setLangOffer(englishVersion);
+    document.body.dataset.lang = englishVersion.id;
+  } else {
+    setLangOffer(polishVersion);
     document.body.dataset.lang = polishVersion.id;
   }
 };
@@ -106,27 +136,29 @@ const setLangMain = (version) => {
   }
   sectionTwoElements.textContent = version.sectionTwo;
 };
-const changeLanugageOffer = () => {
-  if (document.body.dataset.lang === "PL") {
-    setLangOffer(englishVersion);
-    document.body.dataset.lang = englishVersion.id;
-  } else {
-    setLangOffer(polishVersion);
-    document.body.dataset.lang = polishVersion.id;
-  }
-};
 const setLangOffer = (version) => {
   setLanguageNavbar(version);
+  const headerElements = document
+    .querySelector("main")
+    .querySelector("header")
+    .querySelectorAll("h1, p, button");
+  const productsElements = document
+    .querySelector("main")
+    .querySelector(".deafult__section__offer__products")
+    .querySelectorAll("h1");
+  for (let i = 0; i < version.header.length; i++) {
+    headerElements[i].textContent = version.header[i];
+  }
+  for (let i = 0; i < version.products.length; i++) {
+    productsElements[i].textContent = version.products[i];
+  }
 };
-
 const setLanguageNavbar = (version) => {
   for (let i = 0; i < version.navbarText.length; i++) {
     navbarList[i].textContent = version.navbarText[i];
     navbarDropDownList[i].textContent = version.navbarText[i];
   }
 };
-
-const setLanguage = () => {};
 
 // hamburger menu handler
 hamburgerMenu.addEventListener("click", () => {
