@@ -150,7 +150,7 @@ const headerButtonHandler = (elements) => {
   const mainSections = document
     .querySelector("main")
     .querySelectorAll(".default__section__one, .default__section__two");
-  const sectionsToScroll = [...mainSections, footer];
+  const sectionsToScroll = [...mainSections];
   for (let i = 0; i < sectionsToScroll.length; i++) {
     elements[i].addEventListener("click", () => {
       sectionsToScroll[i].scrollIntoView({
@@ -160,11 +160,12 @@ const headerButtonHandler = (elements) => {
     });
   }
 };
+
 const dropdownHeaderButtonHandler = (elements) => {
   const mainSections = document
     .querySelector("main")
     .querySelectorAll(".default__section__one, .default__section__two");
-  const sectionsToScroll = [...mainSections, footer];
+  const sectionsToScroll = [...mainSections];
   for (let i = 0; i < sectionsToScroll.length; i++) {
     elements[i].addEventListener("click", () => {
       hamburgerMenu.classList.toggle("open");
@@ -181,6 +182,21 @@ const dropdownHeaderButtonHandler = (elements) => {
 window.onload = () => {
   headerButtonHandler(navbarList);
   dropdownHeaderButtonHandler(navbarDropDownList);
+  navbarList[2].addEventListener("click", () => {
+    footer.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+  navbarDropDownList[2].addEventListener("click", () => {
+    hamburgerMenu.classList.toggle("open");
+    document.body.classList.toggle("disable__scrolling");
+    navbarDropDown.classList.toggle("visible");
+    footer.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
 };
 
 const ourOffer = document.getElementById("our__offer");
@@ -231,6 +247,11 @@ const renderOfferPage = () => {
     .querySelector("button")
     .addEventListener("click", renderMainPage);
   navbarLogo.addEventListener("click", renderMainPage);
+  navbarLogo.addEventListener("click", () => {
+    navbarDropDown.classList.remove("visible");
+    document.body.classList.remove("disable__scrolling");
+    hamburgerMenu.classList.remove("open");
+  });
 
   window.scrollTo(0, 0);
 };
