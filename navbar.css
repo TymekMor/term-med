@@ -8,7 +8,12 @@
   padding: 1rem var(--navbar-padding);
   position: relative;
   border-radius: 1rem;
-  background: linear-gradient(45deg, var(--blue-color), 3%, var(--white-color));
+  background: linear-gradient(
+    135deg,
+    var(--blue-color),
+    1%,
+    var(--white-color)
+  );
 }
 .navbar__list {
   list-style: none;
@@ -87,8 +92,8 @@
 .navbar__dropdown {
   position: fixed;
   width: 100%;
-  height: calc(100vh - 132px);
-  top: 132px;
+  height: calc(100vh - 166px);
+  top: 164px;
   background-color: var(--white-color);
   display: none;
   z-index: 1000;

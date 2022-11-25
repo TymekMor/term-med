@@ -158,6 +158,7 @@ const setLanguageNavbar = (version) => {
     navbarList[i].textContent = version.navbarText[i];
     navbarDropDownList[i].textContent = version.navbarText[i];
   }
+  footer.querySelector("h1").textContent = version.navbarText[2];
 };
 
 // hamburger menu handler
@@ -192,7 +193,6 @@ const headerButtonHandler = (elements) => {
     });
   }
 };
-
 const dropdownHeaderButtonHandler = (elements) => {
   const mainSections = document
     .querySelector("main")
@@ -324,4 +324,8 @@ const removeChildNodes = (parent) => {
 
 ourOffer.addEventListener("click", () => {
   renderOfferPage();
+});
+
+footer.querySelector(".footer__logo").addEventListener("click", () => {
+  window.scrollTo(0, 0);
 });

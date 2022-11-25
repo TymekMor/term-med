@@ -38,6 +38,7 @@ html {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   background-color: var(--white-color);
+  /*background: linear-gradient(45deg, var(--blue-color), 1%, var(--white-color));*/
 }
 main {
   max-width: var(--max-width);
@@ -46,6 +47,12 @@ main {
   border: 1px solid lightgray;
   border-radius: 1rem;
   overflow: hidden;
+  background: linear-gradient(
+    -45deg,
+    var(--blue-color),
+    1%,
+    var(--white-color)
+  );
 }
 main > section:last-child {
   border-bottom: none;
@@ -55,11 +62,7 @@ main > section:last-child {
   padding: 10rem 5rem;
   border-bottom: 1px solid lightgray;
 }
-footer {
-  display: block;
-  background-color: #222222;
-  height: 500px;
-}
+
 .disable__scrolling {
   height: 100%;
   overflow: hidden;
@@ -69,6 +72,10 @@ footer {
 }
 .not__visible {
   display: none;
+}
+.whiteBackGround {
+  background: none;
+  background-color: var(--white-color);
 }
 @media only screen and (min-width: 0px) and (max-width: 750px) {
   .default__section {
