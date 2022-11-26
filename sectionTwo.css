@@ -1,9 +1,9 @@
 .default__section__two {
   background: linear-gradient(
     15deg,
-    rgb(91, 221, 11, 0.8),
-    30%,
-    rgb(43, 172, 226, 0.8)
+    var(--green-color),
+    60%,
+    var(--blue-color)
   );
 }
 .medicals {

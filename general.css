@@ -21,12 +21,12 @@ button {
   --max-width: 1200px;
   --main-width: 90%;
   --navbar-padding: 2rem;
-  --blue-color: rgb(43, 172, 226);
-  --green-color: rgb(91, 221, 11);
+  --blue-color: rgb(81, 165, 219);
+  --green-color: rgb(105, 194, 146);
   --shadow-specs: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   --shadow-specs-blue: rgb(43, 172, 226, 0.15) 1.95px 1.95px 2.6px;
   --light-borders: 1px solid rgba(131, 131, 131, 0.605);
-  --back--gradient: (rgb(0, 195, 255), rgb(91, 221, 11));
+  --back--gradient: (rgb(81, 165, 219), rgb(105, 194, 146));
   --blue-one: rgb(81, 165, 219);
   --blue-two: rgb(43, 172, 226);
   --green-one: rgb(105, 194, 146);

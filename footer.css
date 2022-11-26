@@ -13,7 +13,7 @@ footer {
 }
 .footer__column {
   display: flex;
-  padding: 2rem;
+  padding: 2rem 4rem;
   flex-direction: column;
   justify-content: center;
 }
@@ -29,6 +29,17 @@ h2 {
   align-items: center;
   justify-content: start;
 }
+.footer__column--right {
+  border-left: 1px solid lightgray;
+}
 .footer__column > p {
   line-height: 2em;
+}
+@media only screen and (min-width: 0px) and (max-width: 750px) {
+  .footer__column {
+    display: flex;
+    padding: 2rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

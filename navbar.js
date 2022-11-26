@@ -12,7 +12,7 @@ const navbarList = document
 const navbarDropDownList = document
   .getElementById("navbar__dropdown")
   .querySelectorAll(".navbar__dropdown__element");
-
+console.log(navbarDropDownList);
 const mainSections = document
   .querySelector("main")
   .querySelectorAll(".default__section__one, .default__section__two");
@@ -67,7 +67,7 @@ const englishVersion = {
     "We specialize in delivering disposable medical products and auxiliary measures ",
     "We deliver our products to the biggest wholesales and pharmacies in Poland. Market dynamics challenges us every day. The underlying rule of Term-Med company is to deliver quality products at a favorable price. Thanks to such policy, we meet our challenges and compete with products from international manufacturers. ",
   ],
-  sectionTwo: "Our Offer",
+  sectionTwo: "View our offer",
   // OFFER PAGE ------
   header: [
     "Our Mission",
@@ -198,16 +198,21 @@ const dropdownHeaderButtonHandler = (elements) => {
     .querySelector("main")
     .querySelectorAll(".default__section__one, .default__section__two");
   const sectionsToScroll = [...mainSections];
+  const tempFunction = () => {
+    hamburgerMenu.classList.remove("open");
+    document.body.classList.remove("disable__scrolling");
+    navbarDropDown.classList.remove("visible");
+  };
   for (let i = 0; i < sectionsToScroll.length; i++) {
+    console.log(elements[i]);
     elements[i].addEventListener("click", () => {
-      hamburgerMenu.classList.toggle("open");
-      document.body.classList.toggle("disable__scrolling");
-      navbarDropDown.classList.toggle("visible");
       sectionsToScroll[i].scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     });
+    elements[i].addEventListener("click", tempFunction);
+    console.log("wtf");
   }
 };
 
