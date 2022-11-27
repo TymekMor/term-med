@@ -75,11 +75,20 @@ const englishVersion = {
     "Go back to main page",
   ],
   products: [
-    "Disposable syringes 2, 5 ml",
-    "Disposable syringes 10, 20 ml",
+    "Disposable syringes 2, 5, 10, 20 ml",
+    "Tongue depressors",
     "Infusion sets",
     "Catheters",
-    "Urine bags for boys and girls",
+    "Daily urine collection bags for boys and girls",
+    "Injection needles",
+    "Uringe bags for girls",
+    "Urine bags for boys",
+    "Nasal aspirator for kids",
+    "Thermally insulated bags for medical products",
+  ],
+  address: [
+    "Dygasińskiego 5 street",
+    "Poland",
   ],
 };
 const polishVersion = {
@@ -99,11 +108,21 @@ const polishVersion = {
     "Powrót do strony głównej",
   ],
   products: [
-    "Strzykawki jednorazowe 2, 5 ml",
-    "Strzykawki jednorazowe 10, 20 ml",
+    "Strzykawki jednorazowe 2, 5, 10, 20 ml",
+    "Szpatułki laryngologiczne",
     "Przyrządy do przetaczania płynów infuzyjnych",
-    "Wenflony",
-    "Woreczki do pobierania próbek moczu dla dziewczynek i chłopców",
+    "Kaniule dożylne",
+    "Woreczki do dobowej zbiórki moczu dla dziewczynek i chłopców",
+    "Igły iniekcyjne",
+    "Woreczek do zbiórki moczu dla dziewczynek",
+    "Woreczek do zbiórki moczu dla chłopców",
+    "Aspirator do nosa dla dzieci",
+    "Torby temoizolacyjne na leki",
+
+  ],
+  address: [
+    "ul.Dygasińskiego 5",
+    "Polska",
   ],
 };
 const changeLanugageMain = () => {
