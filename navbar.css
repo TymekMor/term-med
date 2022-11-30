@@ -26,7 +26,7 @@
   justify-content: center;
   cursor: pointer;
   align-items: center;
-  padding: 1.5em 1.75em;
+  padding: 1.5em 1.5em;
 }
 .navbar__element:hover {
   color: var(--blue-color);
@@ -42,7 +42,7 @@
   color: var(--white-color);
 }
 .navbar__logo > img {
-  height: 6rem;
+  height: 4rem;
   cursor: pointer;
 }
 /* language switch in horizontal nav */
@@ -92,8 +92,8 @@
 .navbar__dropdown {
   position: fixed;
   width: 100%;
-  height: calc(100vh - 166px);
-  top: 164px;
+  height: calc(100vh - 130px);
+  top: 130px;
   background-color: var(--white-color);
   display: none;
   z-index: 1000;

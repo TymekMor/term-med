@@ -8,7 +8,7 @@ footer {
   justify-content: center;
 }
 .footer__logo {
-  height: 5rem;
+  height: 4rem;
   cursor: pointer;
 }
 .footer__column {
@@ -27,7 +27,9 @@ h2 {
 
 .footer__column--left {
   align-items: center;
-  justify-content: start;
+}
+.footer__column--left > p {
+  margin-top: 0.5rem;
 }
 .footer__column--right {
   border-left: 1px solid lightgray;
@@ -35,7 +37,7 @@ h2 {
 .footer__column > p {
   line-height: 2em;
 }
-.unique{
+.unique {
   margin-top: 1rem;
 }
 @media only screen and (min-width: 0px) and (max-width: 750px) {

@@ -86,10 +86,7 @@ const englishVersion = {
     "Nasal aspirator for kids",
     "Thermally insulated bags for medical products",
   ],
-  address: [
-    "Dygasińskiego 5 street",
-    "Poland",
-  ],
+  address: ["Dygasińskiego 5 street", "Mysłowice, Poland"],
 };
 const polishVersion = {
   id: "PL",
@@ -118,12 +115,8 @@ const polishVersion = {
     "Woreczek do zbiórki moczu dla chłopców",
     "Aspirator do nosa dla dzieci",
     "Torby temoizolacyjne na leki",
-
   ],
-  address: [
-    "ul.Dygasińskiego 5",
-    "Polska",
-  ],
+  address: ["ul.Dygasińskiego 5", "Mysłowice, Polska"],
 };
 const changeLanugageMain = () => {
   if (document.body.dataset.lang === "PL") {
@@ -178,6 +171,14 @@ const setLanguageNavbar = (version) => {
     navbarDropDownList[i].textContent = version.navbarText[i];
   }
   footer.querySelector("h1").textContent = version.navbarText[2];
+  console.log(
+    footer.querySelector(".footer__column--left").querySelectorAll("p")
+  );
+  for (let i = 0; i < version.address.length; i++) {
+    footer.querySelector(".footer__column--left").querySelectorAll("p")[
+      i
+    ].textContent = version.address[i];
+  }
 };
 
 // hamburger menu handler
