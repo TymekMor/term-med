@@ -64,29 +64,26 @@ const englishVersion = {
   sectionOne: [
     "Welcome to Term-Med",
     "We are the polish company with more than 15 years of experience in the industry. Since 2005, Term-med company is being conscientiously developed which made it achieve a very strong position on the market.",
-    "We specialize in delivering disposable medical products and auxiliary measures ",
-    "We deliver our products to the biggest wholesales and pharmacies in Poland. Market dynamics challenges us every day. The underlying rule of Term-Med company is to deliver quality products at a favorable price. Thanks to such policy, we meet our challenges and compete with products from international manufacturers. ",
+    "We specialize in delivering disposable medical products and auxiliary measures.",
+    "We collaborate with the biggest wholesales and pharmacies in Poland.",
+    "Moreover we also specialize in importing medical products and placing them onto polish and european market.",
   ],
   sectionTwo: "View our offer",
   // OFFER PAGE ------
-  header: [
-    "Our Mission",
-    "Our mission is to help Polish hospitals. We fullfill it by distributing essential medical products.",
-    "Go back to main page",
-  ],
+  header: ["Our Offer", "Go back to main page"],
   products: [
     "Disposable syringes 2, 5, 10, 20 ml",
-    "Tongue depressors",
+    "Wooden tongue depressors",
     "Infusion sets",
-    "Catheters",
-    "Daily urine collection bags for boys and girls",
+    "Cannulas",
+    "Urine collection bags",
     "Injection needles",
-    "Uringe bags for girls",
-    "Urine bags for boys",
-    "Nasal aspirator for kids",
+    "Samples taking urine bags for girls",
+    "Samples taking urine bags for boys",
+    "Nasal aspirators for kids",
     "Thermally insulated bags for medical products",
   ],
-  address: ["Dygasińskiego 5 street", "Mysłowice, Poland"],
+  address: ["Dygasińskiego 5 street", "Mysłowice 41-400, Poland"],
 };
 const polishVersion = {
   id: "PL",
@@ -95,28 +92,25 @@ const polishVersion = {
     "WITAMY W TERM-MED",
     "Jesteśmy Polską firmą z ponad 15 letnim doświadczeniem. Od 2005 roku zdobywamy doświadczenie i wiedzę, które pozwoliły nam osiągnąć stabilną pozycję na rynku.",
     "Specjalizujemy się w dostarczaniu wyrobów medycznych jednorazowego użytku i środków pomocniczych",
-    "Dostarczamy produkty do największych hurtowni i aptek w Polsce Dynamika rynku produktów medycznych codziennie stawia przed nami nowe wyzwania. Term-Med oferuje swoje produkty tylko w dobrej jakości icenie, dlatego możemy sprostać stawianym przez rynek wyzwaniom ikonkurować z produktami międzynarodowych wytwórców, przy jednoczesnym zachowaniu korzystnego poziomu cen.",
+    "Dostarczamy produkty do największych hurtowni i aptek w Polsce.",
+    "Ponadto specjalizujemy się w imporcie wyrobów medycznych oraz wprowadzaniu ich do obrotu na rynek polski i europejski.",
   ],
   sectionTwo: "Poznaj naszą ofertę",
   // OFFER PAGE ------
-  header: [
-    "Nasza Misja",
-    "Naszą misją jest pomoc Polskim szpitalom. Wypełniamy ją codziennie dystrybuując niezbędne wyroby medyczne",
-    "Powrót do strony głównej",
-  ],
+  header: ["Nasza Oferta", "Powrót do strony głównej"],
   products: [
     "Strzykawki jednorazowe 2, 5, 10, 20 ml",
-    "Szpatułki laryngologiczne",
+    "Drewniane szpatułki laryngologiczne",
     "Przyrządy do przetaczania płynów infuzyjnych",
     "Kaniule dożylne",
-    "Woreczki do dobowej zbiórki moczu dla dziewczynek i chłopców",
+    "Worki do dobowej zbiórki moczu",
     "Igły iniekcyjne",
-    "Woreczek do zbiórki moczu dla dziewczynek",
-    "Woreczek do zbiórki moczu dla chłopców",
-    "Aspirator do nosa dla dzieci",
+    "Woreczki do zbiórki moczu dla dziewczynek",
+    "Woreczki do zbiórki moczu dla chłopców",
+    "Aspiratory do nosa dla dzieci",
     "Torby temoizolacyjne na leki",
   ],
-  address: ["ul.Dygasińskiego 5", "Mysłowice, Polska"],
+  address: ["ul.Dygasińskiego 5", "Mysłowice 41-400, Polska"],
 };
 const changeLanugageMain = () => {
   if (document.body.dataset.lang === "PL") {
@@ -141,6 +135,7 @@ const setLangMain = (version) => {
     .querySelector("main")
     .querySelectorAll(".default__section__one, .default__section__two");
   const sectionOneElements = mainSections[0].querySelectorAll("h1, p");
+  console.log(sectionOneElements);
   const sectionTwoElements = mainSections[1].querySelector(".our__offer");
   setLanguageNavbar(version);
   for (let i = 0; i < version.sectionOne.length; i++) {

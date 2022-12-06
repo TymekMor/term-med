@@ -1,6 +1,5 @@
 footer {
   display: flex;
-  flex-direction: row;
   background-color: #222222;
   padding: 5rem 0rem;
   font-family: inherit;
@@ -41,10 +40,13 @@ h2 {
   margin-top: 1rem;
 }
 @media only screen and (min-width: 0px) and (max-width: 750px) {
-  .footer__column {
-    display: flex;
-    padding: 2rem 2rem;
+  .footer__column--right {
+    border-left: none;
+    border-top: 1px solid lightgray;
+  }
+  footer {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }

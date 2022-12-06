@@ -30,19 +30,9 @@
   font-style: italic;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 3rem;
 }
-
-.deafult__section__offer__header > p {
-  font-size: 1.2rem;
-  font-style: italic;
-  line-height: 2.4rem;
-  font-weight: bold;
-  margin: 3rem 0rem;
-}
-.deafult__section__offer__header > p > span {
-  color: red;
-}
-.deafult__section__offer__header > button {
+.deafult__section__offer__header button {
   font-size: 1rem;
   padding: 1em 2em;
   background: linear-gradient(var(--blue-color), var(--green-two));
@@ -59,7 +49,6 @@
   gap: 1rem;
   justify-content: center;
   box-shadow: var(--shadow-specs);
-  border: 1px solid lightgray;
   overflow: hidden;
   padding-top: 1rem;
 }
@@ -72,10 +61,10 @@
 }
 .product__card div {
   flex: 1;
-  border-top: 1px solid var(--blue-color);
+  border-top: 3px solid var(--blue-color);
   display: flex;
   align-items: center;
-  min-height: 2rem;
+  min-height: 5rem;
 }
 .product__card h1 {
   font-size: 1.2rem;
