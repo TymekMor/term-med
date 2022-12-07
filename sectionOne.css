@@ -7,7 +7,11 @@
   font-size: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
-  background-image: linear-gradient(-90deg, var(--blue-two), var(--green-two));
+  background-image: linear-gradient(
+    -90deg,
+    var(--blue-two),
+    var(--green-color)
+  );
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

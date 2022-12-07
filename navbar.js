@@ -12,7 +12,7 @@ const navbarList = document
 const navbarDropDownList = document
   .getElementById("navbar__dropdown")
   .querySelectorAll(".navbar__dropdown__element");
-console.log(navbarDropDownList);
+
 const mainSections = document
   .querySelector("main")
   .querySelectorAll(".default__section__one, .default__section__two");
@@ -135,7 +135,7 @@ const setLangMain = (version) => {
     .querySelector("main")
     .querySelectorAll(".default__section__one, .default__section__two");
   const sectionOneElements = mainSections[0].querySelectorAll("h1, p");
-  console.log(sectionOneElements);
+
   const sectionTwoElements = mainSections[1].querySelector(".our__offer");
   setLanguageNavbar(version);
   for (let i = 0; i < version.sectionOne.length; i++) {
@@ -166,9 +166,7 @@ const setLanguageNavbar = (version) => {
     navbarDropDownList[i].textContent = version.navbarText[i];
   }
   footer.querySelector("h1").textContent = version.navbarText[2];
-  console.log(
-    footer.querySelector(".footer__column--left").querySelectorAll("p")
-  );
+  footer.querySelector(".footer__column--left").querySelectorAll("p");
   for (let i = 0; i < version.address.length; i++) {
     footer.querySelector(".footer__column--left").querySelectorAll("p")[
       i
@@ -219,7 +217,6 @@ const dropdownHeaderButtonHandler = (elements) => {
     navbarDropDown.classList.remove("visible");
   };
   for (let i = 0; i < sectionsToScroll.length; i++) {
-    console.log(elements[i]);
     elements[i].addEventListener("click", () => {
       sectionsToScroll[i].scrollIntoView({
         behavior: "smooth",
@@ -227,7 +224,6 @@ const dropdownHeaderButtonHandler = (elements) => {
       });
     });
     elements[i].addEventListener("click", tempFunction);
-    console.log("wtf");
   }
 };
 
